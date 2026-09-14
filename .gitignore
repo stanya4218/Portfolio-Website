@@ -1,0 +1,17 @@
+.DS_Store
+
+.git-bak-*
+assets/images/projects/project-4/Tsynthesis/
+assets/images/projects/project-4/Tsynthesis 8.zip
+
+# Old duplicate copy of this site with its own embedded git repo
+github/
+
+# Unrelated Python side tool, not part of the website
+.mplconfig/
+__pycache__/
+app.py
+financial_risk_app.py
+financial_risk_highlighter.py
+irr_sensitivity.png
+matplotlib_smoke.png

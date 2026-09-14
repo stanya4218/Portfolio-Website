@@ -1,0 +1,149 @@
+.interests {
+  background: var(--trace-paper);
+}
+
+.interests__grid {
+  display: grid;
+  grid-template-columns: var(--interests-grid-columns);
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.interest-tile {
+  width: 185px;
+  height: 185px;
+  min-height: 185px; /* keep consistent if any media-query removes fixed height */
+}
+
+.interest-photo {
+  background: var(--interest-photo-bg);
+  border: var(--border-width-1) solid transparent;
+  transition:
+    transform var(--interest-transition-duration) var(--ease-smooth),
+    border-color var(--interest-transition-duration) var(--ease-smooth);
+}
+
+.interest-photo:hover {
+  /* Keep strict frame size on hover */
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image1 {
+  /* Only provide the background image; sizing comes from `.interest-tile` */
+  align-self: start;
+  overflow: hidden;
+  /* css/ lives one level below assets/ */
+  background-image: url("../assets/images/image%201.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image1:hover {
+  /* Keep strict frame size on hover (same as base photo hover) */
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image2 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%202.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image2:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image3 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%203.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image3:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image4 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%204.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image4:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image5 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%205.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image5:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image6 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%206.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image6:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image7 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%207.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image7:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-photo--image8 {
+  align-self: start;
+  overflow: hidden;
+  background-image: url("../assets/images/image%208.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.interest-photo--image8:hover {
+  transform: none;
+  border-color: var(--terracotta);
+}
+
+.interest-text {
+  display: grid;
+  place-items: center;
+  padding: var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--interest-text-font-size);
+  letter-spacing: var(--interest-text-letter-spacing);
+  color: var(--charcoal);
+  background: var(--interest-text-bg);
+  border: var(--border-width-1) solid var(--interest-photo-bg);
+}

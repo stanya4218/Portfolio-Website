@@ -1,0 +1,61 @@
+#loader {
+  position: fixed;
+  inset: var(--zero);
+  z-index: var(--loader-z-index);
+  display: grid;
+  place-items: center;
+  background: var(--charcoal);
+  color: var(--text-on-dark);
+}
+
+.loader__inner {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.loader__sketch {
+  width: var(--loader-lego-width);
+  height: auto;
+  overflow: visible;
+  margin-bottom: var(--space-md);
+}
+
+.skyline-line {
+  fill: none;
+  stroke: var(--loader-sketch-stroke);
+  stroke-width: var(--loader-sketch-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loader-pencil {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.loader-pencil__body {
+  fill: var(--loader-pencil-body);
+}
+
+.loader-pencil__tip {
+  fill: var(--loader-pencil-tip);
+}
+
+.loader-pencil__accent {
+  fill: var(--loader-pencil-accent);
+}
+
+.loader__name {
+  margin: var(--zero) var(--zero) var(--space-xs);
+  font-family: var(--font-display);
+  font-size: var(--loader-name-font-size);
+  letter-spacing: var(--loader-name-letter-spacing);
+  opacity: var(--opacity-0);
+}
+
+.loader__tagline {
+  margin: var(--zero);
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  opacity: var(--opacity-0);
+}

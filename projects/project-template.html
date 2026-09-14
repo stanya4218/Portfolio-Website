@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project | Tanya Singh</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: "Space Grotesk", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+        --charcoal: #1a1a1a;
+        --terracotta: #c1440e;
+        --text-muted: #6b6b6b;
+        --white-pure: #ffffff;
+        --trace-paper: #f5f0e8;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--charcoal);
+        background: var(--white-pure);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .project-nav {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+      }
+
+      .project-nav a {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--terracotta);
+        letter-spacing: 0.04em;
+      }
+
+      .project-nav a:hover {
+        opacity: 0.8;
+      }
+
+      .project-hero {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        min-height: 280px;
+        background: #b0b0b0;
+      }
+
+      .project-hero__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(26, 26, 26, 0.75) 0%, transparent 55%);
+        pointer-events: none;
+      }
+
+      .project-hero__text {
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.75rem;
+        color: var(--white-pure);
+      }
+
+      .project-hero__tag {
+        margin: 0 0 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.95;
+      }
+
+      .project-hero__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 4vw, 2.75rem);
+        font-weight: 600;
+        line-height: 1.1;
+      }
+
+      .project-meta {
+        border-top: 1px solid var(--terracotta);
+        border-bottom: 1px solid var(--terracotta);
+        margin: 0;
+      }
+
+      .project-meta__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 2rem;
+        justify-content: space-between;
+      }
+
+      .project-meta__cell {
+        min-width: 120px;
+      }
+
+      .project-meta__label {
+        margin: 0 0 0.35rem;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .project-meta__value {
+        margin: 0;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+      }
+
+      .project-body {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 3rem;
+      }
+
+      .project-body__aside {
+        flex: 0 0 30%;
+        min-width: 220px;
+      }
+
+      .project-body__aside h2 {
+        margin: 0 0 1rem;
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+      }
+
+      .project-body__aside ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .project-body__aside li {
+        margin-bottom: 0.5rem;
+      }
+
+      .project-body__main {
+        flex: 1 1 0;
+        min-width: 280px;
+      }
+
+      .project-body__main p {
+        margin: 0 0 1rem;
+      }
+
+      .project-visuals {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .project-visuals__block {
+        flex: 1 1 0;
+        min-width: 200px;
+        height: 300px;
+        background: #c8c8c8;
+      }
+
+      .project-footer {
+        padding: 1.5rem;
+        border-top: 1px solid rgba(26, 26, 26, 0.08);
+        background: var(--trace-paper);
+      }
+
+      .project-footer a {
+        font-family: var(--font-mono);
+        color: var(--terracotta);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+      }
+
+      .project-footer a:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="project-nav">
+      <a href="../index.html">← Back to Work</a>
+    </nav>
+
+    <header class="project-hero" role="img" aria-label="Project hero image placeholder">
+      <div class="project-hero__overlay" aria-hidden="true"></div>
+      <div class="project-hero__text">
+        <p class="project-hero__tag">CONSTRUCTION</p>
+        <h1 class="project-hero__title">Project Title Placeholder</h1>
+      </div>
+    </header>
+
+    <section class="project-meta" aria-label="Project metadata">
+      <div class="project-meta__inner">
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Company</p>
+          <p class="project-meta__value"><!-- PLACEHOLDER -->Company name</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Project Size</p>
+          <p class="project-meta__value"><!-- PLACEHOLDER -->e.g. 120,000 sq ft</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Estimated Cost</p>
+          <p class="project-meta__value"><!-- PLACEHOLDER -->$—</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Year</p>
+          <p class="project-meta__value"><!-- PLACEHOLDER -->20—</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Credits</p>
+          <p class="project-meta__value"><!-- PLACEHOLDER -->Role, collaborators</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-body">
+      <aside class="project-body__aside">
+        <h2>My Role</h2>
+        <ul>
+          <li><!-- PLACEHOLDER -->Responsibility one</li>
+          <li><!-- PLACEHOLDER -->Responsibility two</li>
+          <li><!-- PLACEHOLDER -->Responsibility three</li>
+        </ul>
+      </aside>
+      <div class="project-body__main">
+        <p>
+          <!-- PLACEHOLDER: paragraph 1 -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Project description placeholder — scope, context, and what made the work meaningful in two to three sentences.
+        </p>
+        <p>
+          <!-- PLACEHOLDER: paragraph 2 -->
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Contribution and outcome placeholder — how decisions were coordinated and what changed on site or in delivery.
+        </p>
+        <p>
+          <!-- PLACEHOLDER: paragraph 3 -->
+          Ut enim ad minim veniam, quis nostrud exercitation. Closing placeholder — lessons, constraints, or next steps tied to the built environment.
+        </p>
+      </div>
+    </div>
+
+    <section class="project-visuals" aria-label="Project visuals">
+      <div class="project-visuals__block" role="img" aria-label="Visual placeholder 1"></div>
+      <div class="project-visuals__block" role="img" aria-label="Visual placeholder 2"></div>
+      <div class="project-visuals__block" role="img" aria-label="Visual placeholder 3"></div>
+    </section>
+
+    <footer class="project-footer">
+      <a href="../index.html">← Back to Work</a>
+    </footer>
+  </body>
+</html>

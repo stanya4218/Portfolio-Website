@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanya Singh | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/ticker.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/interests.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div id="loader" aria-hidden="true">
+      <div class="loader__inner">
+        <svg
+          class="loader__sketch"
+          viewBox="0 0 420 220"
+          role="img"
+          aria-label="Animated pencil drawing of city elevation"
+        >
+          <path
+            class="skyline-line"
+            d="M32 184
+               L32 132 L72 132 L72 154 L96 146 L96 184
+               L120 184 L120 108 L168 108 L168 124 L192 116 L192 184
+               L210 184 L210 88 L266 88 L266 108 L296 98 L296 184
+               L316 184 L316 126 L356 126 L356 142 L382 134 L382 184
+               L356 184 L356 142 L316 142 L316 184
+               L296 184 L296 98 L266 108 L266 184
+               L192 184 L192 116 L168 124 L168 184
+               L96 184 L96 146 L72 154 L72 184
+               L32 184"
+          />
+          <g class="loader-pencil" aria-hidden="true">
+            <rect class="loader-pencil__body" x="-20" y="-4" width="22" height="8" rx="2" />
+            <polygon class="loader-pencil__tip" points="2,-4 10,0 2,4" />
+            <rect class="loader-pencil__accent" x="-10" y="-4" width="4" height="8" />
+          </g>
+        </svg>
+        <h1 class="loader__name">Tanya Singh</h1>
+        <p class="loader__tagline">Construction, Project Management, Architecture, AI, Strategy</p>
+      </div>
+    </div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="nav-logo" href="#hero">
+          <!-- PLACEHOLDER: logo text -->
+          TS
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Work</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-resume" href="assets/resume/Tanya%20Singh.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="section hero" data-nav="light">
+        <div class="hero__content">
+          <p class="hero__location"><!-- PLACEHOLDER: location -->Carnegie Mellon University</p>
+          <h1 class="hero__title">Tanya Singh</h1>
+          <p class="hero__subtitle"><!-- PLACEHOLDER: traits -->Curious. Collaborative. Relentless.</p>
+          <a class="hero__cta" href="#experience">See My Work ↓</a>
+        </div>
+        <div class="hero__scroll-indicator" aria-hidden="true"></div>
+      </section>
+
+      <section id="about" class="section about" data-nav="light">
+        <div class="about__grid">
+          <div class="about__text" data-reveal>
+            <p>
+              <!-- PLACEHOLDER: about professional identity -->
+              Formally educated in architecture and construction management, I work at the intersection of construction and technology, grounded in a deep understanding of how projects actually get built, bringing together teams, consultants, and contractors to keep work on cost, on schedule, and true to intent, from the first drawing to the final punch list. My final smash across the net is a strong grip on AI for construction, sharpened across multiple builds of my own that bring those workflows to life.
+            </p>
+            <div class="about__accent" aria-hidden="true"></div>
+            <p>
+              <!-- PLACEHOLDER: about personal profile -->
+              Lego kits, puzzles, blueprints, badminton, cycling, and memoirs taught me to notice details, stay patient, and keep building with care.
+            </p>
+          </div>
+          <div class="about__side" data-reveal>
+            <div class="about__cycling" aria-live="polite">
+              <div class="about__cycling-line"></div>
+              <div class="about__cycling-row is-visible">
+                <p class="about__cycling-value">Arch + AEC-M</p>
+                <p class="about__cycling-label">Education</p>
+              </div>
+              <div class="about__cycling-line"></div>
+            </div>
+
+            <div class="about__image-wrap">
+              <img
+                id="about-image-1"
+                class="about__image is-visible"
+                src="assets/images/lego-photo.jpg"
+                alt="Lego and early building inspiration"
+              />
+              <img
+                id="about-image-2"
+                class="about__image"
+                src="assets/images/site-photo.jpg"
+                alt="On-site construction context"
+              />
+              <p class="about__image-caption is-visible">I've been building since before I knew it was a career.</p>
+              <p class="about__image-caption">From wacky roofs to real ones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ticker" aria-label="Interests ticker" data-nav="dark">
+        <div class="ticker__track">
+          <p class="ticker__set">
+            <span class="ticker__word">Design &amp; Construction Management</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Solution Design &amp; Demos</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Stakeholder coordination</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Technical Discovery &amp; Scoping</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Preconstruction &amp; Value Engineering</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Implementation &amp; Configuration</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">AI in Construction</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Customer Onboarding &amp; Training</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Cycling</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Integration &amp; API Enablement</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">City personification</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Requirements Gathering</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Puzzles</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Roadmap &amp; Adoption Strategy</span><span class="ticker__star">✦</span>
+          </p>
+          <p class="ticker__set" aria-hidden="true">
+            <span class="ticker__word">Design &amp; Construction Management</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Solution Design &amp; Demos</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Stakeholder coordination</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Technical Discovery &amp; Scoping</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Preconstruction &amp; Value Engineering</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Implementation &amp; Configuration</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">AI in Construction</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Customer Onboarding &amp; Training</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Cycling</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Integration &amp; API Enablement</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">City personification</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Requirements Gathering</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Puzzles</span><span class="ticker__star">✦</span>
+            <span class="ticker__word">Roadmap &amp; Adoption Strategy</span><span class="ticker__star">✦</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience" data-nav="dark">
+        <div class="section-heading" data-reveal>
+          <h2>Projects &amp; Work</h2>
+        </div>
+        <div class="experience__grid experience__grid--projects">
+          <a class="project-card project-card--link" href="projects/project-4.html" target="_self" data-reveal>
+            <div class="card-image-placeholder" role="img" aria-label="Project image placeholder" style="background-image: url('assets/images/projects/project-4/s1.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center 70%;"><!-- PLACEHOLDER: project image --></div>
+            <p class="card-phase">CONTECH</p>
+            <h3>ReVIVE — Condemned Property Prioritisation Tool, Pittsburgh</h3>
+            <p>
+              Developed a weighted hazard scoring framework using spatial data integration across Pittsburgh's fragmented municipal systems to prioritise condemned buildings for demolition. Simulated a 41% reduction in average resolution time from 22 to 13 months.
+            </p>
+          </a>
+          <a class="project-card project-card--link" href="projects/project-5.html" target="_self" data-reveal>
+            <div class="card-image-placeholder" role="img" aria-label="Change Register construction change management system" style="background-image: url('assets/images/projects/project-5/change-register-icon.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+            <p class="card-phase">CONTECH</p>
+            <h3>Change Register — Capital Project Change Management</h3>
+            <p>
+              A workflow-automation system of record for construction change where the log is the workflow, not a spreadsheet updated after the fact. A change gets one identifier the day it's raised and keeps it through estimate, contractor proposal, approval, and executed change order, with deterministic rules handling numbering, approval tier routing, and contingency escalation while AI guardrails keep every judgment call with a human.
+            </p>
+          </a>
+          <a class="project-card project-card--link" href="projects/project-6.html" target="_self" data-reveal>
+            <div class="card-image-placeholder" role="img" aria-label="Delay Claim Forensics Agent — critical path analysis" style="background-image: url('assets/images/projects/project-6/delay-forensics-icon.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+            <p class="card-phase">CONTECH</p>
+            <h3>Delay Claim Forensics Agent</h3>
+            <p>
+              An agentic con-tech tool that joins RFIs, change orders, and daily reports to CPM schedule movement to pinpoint which event shifted the critical path and by how many days. A deterministic CPM engine computes every time-impact figure while the model only proposes, so no assertion reaches the report unless it traces to a source document.
+            </p>
+          </a>
+          <a class="project-card project-card--link" href="projects/project-1.html" target="_self" data-reveal>
+            <div
+              class="card-image-placeholder"
+              role="img"
+              aria-label="Worldmark 2.0 project image"
+              style="background-image: url('assets/images/projects/project-1/image%20p1.jpg'); background-size: cover; background-position: center;"
+            ></div>
+            <p class="card-phase">CONSTRUCTION</p>
+            <h3>Worldmark 2.0 - Bharti Realty Mega Commercial</h3>
+            <p>
+              $2B, 3.5M sq ft LEED-certified mixed-use development in Aerocity, New Delhi. Coordinated 25+ stakeholders across
+              design, MEP, and regulatory approvals as Project Architect at Arcop Associates.
+            </p>
+          </a>
+          <a class="project-card project-card--link" href="projects/project-2.html" target="_self" data-reveal>
+            <div
+              class="card-image-placeholder"
+              role="img"
+              aria-label="Pharmaceutical manufacturing campus interior"
+              style="background-image: url('assets/images/projects/project-2/lab.webp'); background-size: cover; background-position: center;"
+            ></div>
+            <p class="card-phase">CONSTRUCTION</p>
+            <h3>Advanced Pharmaceutical Manufacturing Campus</h3>
+            <p>
+              Greenfield manufacturing campus for a leading life-sciences client, delivered as an Assistant Project Manager for project controls with Mace Consult. Owned cost control and forecasting, change management, and progress measurement across a $9B program, coordinating concurrent contractor packages and keeping owner reporting accurate as the build scaled.
+            </p>
+          </a>
+          <a class="project-card project-card--link" href="projects/project-3.html" target="_self" data-reveal>
+            <img
+              class="card-image-placeholder"
+              src="assets/images/projects/project-3/r1.jpg"
+              alt="Runway 10-28 Safety Area Improvements project image"
+              style="display: block; width: 100%; object-fit: cover; object-position: center;"
+            />
+            <p class="card-phase">CONSTRUCTION</p>
+            <h3>Runway 10-28 Safety Area Improvements — Allegheny County Airport (AGC)</h3>
+            <p>
+              FAA-mandated airside safety upgrades at West Mifflin, PA. Project management internship with Hill International as owner's representative, supporting cost controls, contract administration, sustainability initiatives, and FAA compliance across aviation.
+            </p>
+          </a>
+        </div>
+
+        <a class="experience__resume-link" href="assets/resume/Tanya%20Singh.pdf" target="_blank" rel="noopener noreferrer">View Full Resume →</a>
+      </section>
+
+      <section id="interests" class="section interests" data-nav="light">
+        <div class="section-heading" data-reveal>
+          <h2>What Moves Me</h2>
+        </div>
+        <div class="interests__grid">
+          <!-- Row 1 (8 columns): image, word, image, word, image, word, image, word -->
+          <div class="interest-tile interest-photo interest-photo--image1" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>PUZZLES</div>
+          <div class="interest-tile interest-photo interest-photo--image2" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>MEMOIR READING</div>
+          <div class="interest-tile interest-photo interest-photo--image3" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>BLUEPRINTS</div>
+          <div class="interest-tile interest-photo interest-photo--image6" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>TRAVELLER</div>
+
+          <!-- Row 2 (inverse): word, image, word, image, word, image, word, image -->
+          <div class="interest-tile interest-text" data-reveal>CITY WALKS</div>
+          <div class="interest-tile interest-photo interest-photo--image4" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>STUDENT LEADER</div>
+          <div class="interest-tile interest-photo interest-photo--image5" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>AI ENTHUSIAST</div>
+          <div class="interest-tile interest-photo interest-photo--image7" data-reveal></div>
+          <div class="interest-tile interest-text" data-reveal>PROBLEM SOLVING</div>
+          <div class="interest-tile interest-photo interest-photo--image8" data-reveal></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" data-nav="dark">
+        <svg class="contact__lines" viewBox="0 0 1200 500" aria-hidden="true">
+          <path class="draw-line" d="M20 80 L420 80 L500 160 L900 160" />
+          <path class="draw-line" d="M40 240 L360 240 L460 320 L840 320" />
+          <path class="draw-line" d="M120 420 L520 420 L620 380 L1140 380" />
+        </svg>
+        <div class="contact__content" data-reveal>
+          <h2>ALWAYS LEARNING. ALWAYS BUILDING.</h2>
+          <p>
+            Constantly exploring the built environment and where AI fits in.
+            Always happy to chat.
+          </p>
+          <div class="contact__links">
+            <div class="contact__email-wrap">
+              <button type="button" class="contact__email-toggle">Email</button>
+              <div class="contact__email-dropdown" hidden>
+                <a href="mailto:stanya4218@gmail.com">stanya4218@gmail.com</a>
+                <a href="mailto:tanyas2@alumni.cmu.edu">tanyas2@alumni.cmu.edu</a>
+              </div>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/tanya-singh-aecmanagement"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="footer-year"></span> <span><!-- PLACEHOLDER: name -->Tanya Singh</span> | Built with care</p>
+    </footer>
+
+    <audio id="brick-audio" preload="auto" src="assets/sounds/brick-click.mp3"></audio>
+    <audio id="pencil-audio" preload="auto" src="assets/sounds/pencil-draw.mp3"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/ticker.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/about.js?v=2"></script>
+    <script>
+      (function () {
+        var wrap = document.querySelector(".contact__email-wrap");
+        if (!wrap) return;
+        var btn = wrap.querySelector(".contact__email-toggle");
+        var dropdown = wrap.querySelector(".contact__email-dropdown");
+        if (!btn || !dropdown) return;
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.hidden = !dropdown.hidden;
+        });
+        document.addEventListener("click", function () {
+          dropdown.hidden = true;
+        });
+      })();
+    </script>
+  </body>
+</html>

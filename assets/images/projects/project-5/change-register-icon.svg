@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Change Register — capital project change management">
+  <defs>
+    <pattern id="grid5" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="600" height="360" fill="#1a1a1a"/>
+  <rect width="600" height="360" fill="url(#grid5)"/>
+
+  <!-- register ledger -->
+  <g>
+    <rect x="70" y="70" width="330" height="220" rx="6" fill="#f5f0e8" fill-opacity="0.06" stroke="#f5f0e8" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- header row -->
+    <rect x="70" y="70" width="330" height="34" rx="6" fill="#4a7fa5" fill-opacity="0.85"/>
+    <rect x="70" y="94" width="330" height="10" fill="#4a7fa5" fill-opacity="0.85"/>
+    <circle cx="92" cy="87" r="5" fill="#f5f0e8"/>
+    <rect x="106" y="83" width="120" height="8" rx="2" fill="#f5f0e8" fill-opacity="0.9"/>
+
+    <!-- ledger rows with change IDs -->
+    <g font-family="monospace" font-size="15" fill="#c1440e" font-weight="bold">
+      <text x="88" y="140">CR-001</text>
+      <text x="88" y="180">CR-002</text>
+      <text x="88" y="220">CR-003</text>
+      <text x="88" y="260">CR-004</text>
+    </g>
+    <g fill="#f5f0e8" fill-opacity="0.5">
+      <rect x="170" y="130" width="150" height="8" rx="2"/>
+      <rect x="170" y="170" width="180" height="8" rx="2"/>
+      <rect x="170" y="210" width="130" height="8" rx="2"/>
+      <rect x="170" y="250" width="165" height="8" rx="2"/>
+    </g>
+    <g stroke="#f5f0e8" stroke-opacity="0.12" stroke-width="1">
+      <line x1="82" y1="150" x2="388" y2="150"/>
+      <line x1="82" y1="190" x2="388" y2="190"/>
+      <line x1="82" y1="230" x2="388" y2="230"/>
+    </g>
+  </g>
+
+  <!-- approval routing: change tag flowing to an approved stamp -->
+  <g>
+    <!-- flow arrow -->
+    <path d="M400 180 L470 180" fill="none" stroke="#f5f0e8" stroke-opacity="0.6" stroke-width="3" stroke-dasharray="6 5"/>
+    <path d="M470 180 l-9 -5 l0 10 z" fill="#f5f0e8" fill-opacity="0.6"/>
+
+    <!-- approval stages (tiers) -->
+    <circle cx="500" cy="110" r="14" fill="#c1440e"/>
+    <circle cx="500" cy="180" r="14" fill="#c1440e" fill-opacity="0.6"/>
+    <circle cx="500" cy="250" r="14" fill="#c1440e" fill-opacity="0.3"/>
+    <line x1="500" y1="124" x2="500" y2="166" stroke="#c1440e" stroke-opacity="0.5" stroke-width="2"/>
+    <line x1="500" y1="194" x2="500" y2="236" stroke="#c1440e" stroke-opacity="0.5" stroke-width="2"/>
+
+    <!-- approved checkmark (forest) -->
+    <circle cx="500" cy="110" r="14" fill="none" stroke="#f5f0e8" stroke-width="2"/>
+    <path d="M493 110 l5 5 l9 -11" fill="none" stroke="#2d5a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

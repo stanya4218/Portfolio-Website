@@ -1,0 +1,90 @@
+.contact {
+  color: var(--text-on-dark);
+  background-color: var(--charcoal);
+  background-image:
+    linear-gradient(var(--blueprint-grid-trace-0045) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size)),
+    linear-gradient(var(--deg-90), var(--blueprint-grid-trace-0045) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size));
+  background-size: var(--blueprint-grid-size);
+}
+
+.contact__content {
+  max-width: var(--contact-content-max-width);
+  position: relative;
+  z-index: var(--contact-content-z);
+}
+
+.contact__content h2 {
+  margin: var(--zero) var(--zero) var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--contact-h2-font-size);
+  line-height: var(--contact-h2-line-height);
+}
+
+.contact__content p {
+  margin: var(--zero) var(--zero) var(--space-md);
+  max-width: var(--contact-paragraph-max-width);
+}
+
+.contact__links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.contact__links > a {
+  font-family: var(--font-display);
+  border-bottom: var(--border-width-1) solid var(--text-on-dark);
+}
+
+.contact__email-wrap {
+  position: relative;
+}
+
+.contact__email-toggle {
+  font-family: var(--font-display);
+  color: inherit;
+  background: none;
+  border: none;
+  border-bottom: var(--border-width-1) solid var(--text-on-dark);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.contact__email-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: var(--space-xs);
+  z-index: 100;
+  background: var(--trace-paper);
+  border: var(--border-width-1) solid var(--terracotta);
+  border-radius: 4px;
+}
+
+.contact__email-dropdown a {
+  display: block;
+  color: var(--charcoal);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.contact__lines {
+  position: absolute;
+  inset: var(--zero);
+  width: var(--width-full);
+  height: var(--width-full);
+  z-index: var(--contact-lines-z-index);
+}
+
+.draw-line {
+  fill: none;
+  stroke: var(--contact-line-stroke);
+  stroke-width: var(--draw-line-stroke-width);
+}

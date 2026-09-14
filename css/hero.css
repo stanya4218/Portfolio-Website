@@ -1,0 +1,79 @@
+.hero {
+  min-height: var(--hero-min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--trace-paper);
+  background-image:
+    linear-gradient(var(--blueprint-grid-charcoal-004) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size)),
+    linear-gradient(var(--deg-90), var(--blueprint-grid-charcoal-004) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size));
+  background-size: var(--hero-background-grid-size);
+}
+
+.hero__content {
+  max-width: var(--max-width-hero-content);
+  margin: var(--zero) auto;
+  width: var(--width-full);
+}
+
+.hero__location {
+  margin: var(--zero) var(--zero) var(--space-sm);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.hero__title {
+  margin: var(--zero);
+  font-family: var(--font-display);
+  font-size: var(--hero-title-font-size);
+  font-weight: var(--hero-title-font-weight);
+  line-height: var(--hero-title-line-height);
+  color: var(--charcoal);
+}
+
+.hero__subtitle {
+  margin: var(--space-sm) var(--zero) var(--space-md);
+  font-size: var(--hero-subtitle-font-size);
+  color: var(--ink);
+}
+
+.hero__cta {
+  display: inline-block;
+  padding-bottom: var(--hero-cta-padding-bottom);
+  border-bottom: var(--hero-cta-border-width) solid var(--terracotta);
+  font-family: var(--font-display);
+  font-weight: var(--hero-cta-font-weight);
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  left: var(--hero-scroll-indicator-left);
+  bottom: var(--space-md);
+  width: var(--hero-scroll-indicator-width);
+  height: var(--hero-scroll-indicator-height);
+  background: var(--hero-scroll-indicator-bg);
+  overflow: hidden;
+  transform: var(--hero-scroll-indicator-transform);
+}
+
+.hero__scroll-indicator::after {
+  content: "";
+  position: absolute;
+  top: var(--hero-scroll-indicator-after-top);
+  left: var(--zero);
+  width: var(--width-full);
+  height: var(--hero-scroll-indicator-after-height);
+  background: var(--terracotta);
+  animation: lineDrop var(--hero-scroll-indicator-after-duration) infinite var(--ease-smooth);
+}
+
+@keyframes lineDrop {
+  0% {
+    transform: var(--lineDrop-transform-from);
+  }
+  100% {
+    transform: var(--lineDrop-transform-to);
+  }
+}

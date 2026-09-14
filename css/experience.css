@@ -1,0 +1,95 @@
+.experience {
+  color: var(--text-on-dark);
+  background-color: var(--charcoal);
+  background-image:
+    linear-gradient(var(--blueprint-grid-trace-0045) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size)),
+    linear-gradient(var(--deg-90), var(--blueprint-grid-trace-0045) var(--blueprint-grid-line-size), transparent
+        var(--blueprint-grid-line-size));
+  background-size: var(--blueprint-grid-size);
+}
+
+.experience__grid {
+  display: grid;
+  grid-template-columns: var(--experience-grid-columns);
+  gap: var(--space-md);
+}
+
+.experience__grid--projects {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: var(--bp-mobile)) {
+  .experience__grid--projects {
+    grid-template-columns: var(--grid-1fr);
+  }
+}
+
+.project-card {
+  background: var(--project-card-bg);
+  border: var(--border-width-1) solid var(--project-card-border);
+  padding: var(--space-sm);
+  transition:
+    transform var(--project-card-transition-duration) var(--ease-smooth),
+    border-color var(--project-card-transition-duration) var(--ease-smooth),
+    box-shadow var(--project-card-transition-duration) var(--ease-smooth);
+}
+
+.project-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: none;
+}
+
+.project-card--link:hover {
+  transform: none;
+  border-color: var(--project-card-border);
+  box-shadow: none;
+}
+
+.card-image-placeholder {
+  min-height: var(--card-image-placeholder-min-height);
+  margin-bottom: var(--space-sm);
+  background-color: var(--card-image-placeholder-bg);
+  border: var(--border-width-1) dashed var(--card-image-placeholder-border);
+}
+
+.project-card--link .card-image-placeholder {
+  border-style: solid;
+  border-color: var(--project-card-border);
+}
+
+.card-phase {
+  margin: var(--card-margin-0-0-halfrem);
+  color: var(--terracotta);
+  font-family: var(--font-mono);
+  font-size: var(--card-phase-font-size);
+  text-transform: uppercase;
+}
+
+.project-card h3,
+.project-card h4 {
+  margin: var(--card-margin-0-0-halfrem);
+  font-family: var(--font-display);
+}
+
+.project-card p {
+  margin: var(--zero);
+  color: var(--text-on-dark);
+}
+
+.experience__resume-link {
+  margin-top: var(--space-lg);
+  display: inline-block;
+  color: var(--text-on-dark);
+  opacity: var(--resume-link-opacity);
+  border-bottom: var(--resume-link-border-width) solid var(--text-on-dark);
+}
+
+.experience__card:nth-child(4) img,
+.experience__card:nth-child(5) img,
+.experience__card:nth-child(6) img {
+  object-fit: contain;
+  background-color: #ffffff;
+}

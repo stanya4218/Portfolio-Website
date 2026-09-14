@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Delay claim forensics — critical path analysis">
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="600" height="360" fill="#1a1a1a"/>
+  <rect width="600" height="360" fill="url(#grid)"/>
+
+  <!-- schedule bars (non-critical, steel blue) -->
+  <g>
+    <rect x="70"  y="70"  width="120" height="20" rx="3" fill="#4a7fa5" fill-opacity="0.55"/>
+    <rect x="150" y="150" width="150" height="20" rx="3" fill="#4a7fa5" fill-opacity="0.55"/>
+    <rect x="360" y="230" width="110" height="20" rx="3" fill="#4a7fa5" fill-opacity="0.55"/>
+    <rect x="220" y="290" width="140" height="20" rx="3" fill="#4a7fa5" fill-opacity="0.55"/>
+  </g>
+
+  <!-- critical path chain (terracotta) -->
+  <g>
+    <rect x="70"  y="110" width="130" height="22" rx="3" fill="#c1440e"/>
+    <rect x="210" y="180" width="130" height="22" rx="3" fill="#c1440e"/>
+    <rect x="350" y="180" width="90"  height="22" rx="3" fill="#c1440e"/>
+    <!-- delay slip (dashed extension) -->
+    <rect x="440" y="180" width="70" height="22" rx="3" fill="#c1440e" fill-opacity="0.28" stroke="#c1440e" stroke-width="1.5" stroke-dasharray="5 4"/>
+  </g>
+
+  <!-- dependency arrows along the critical path -->
+  <g fill="none" stroke="#f5f0e8" stroke-opacity="0.7" stroke-width="2">
+    <path d="M200 121 L210 191"/>
+    <path d="M340 191 L350 191"/>
+    <path d="M440 191 L440 191"/>
+  </g>
+  <g fill="#f5f0e8" fill-opacity="0.7">
+    <path d="M210 191 l-8 -3 l3 8 z"/>
+    <path d="M350 191 l-8 -4 l0 8 z"/>
+  </g>
+
+  <!-- forensics magnifier over the delay slip -->
+  <g>
+    <circle cx="452" cy="150" r="46" fill="#1a1a1a" fill-opacity="0.35" stroke="#f5f0e8" stroke-width="6"/>
+    <line x1="486" y1="184" x2="524" y2="222" stroke="#f5f0e8" stroke-width="10" stroke-linecap="round"/>
+    <!-- flagged critical node inside the lens -->
+    <circle cx="452" cy="150" r="10" fill="#2d5a27"/>
+    <path d="M452 150 l14 -22" stroke="#2d5a27" stroke-width="3"/>
+    <path d="M466 128 l16 5 l-14 9 z" fill="#2d5a27"/>
+  </g>
+</svg>

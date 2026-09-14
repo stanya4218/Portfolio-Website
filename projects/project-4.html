@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City of Pittsburgh - RenewPGH / ReVIVE | Tanya Singh</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  <style>
+      :root {
+        --font-display: "Space Grotesk", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+        --charcoal: #1a1a1a;
+        --terracotta: #c1440e;
+        --text-muted: #6b6b6b;
+        --white-pure: #ffffff;
+        --trace-paper: #f5f0e8;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--charcoal);
+        background: var(--white-pure);
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--terracotta);
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+      }
+
+      a:hover {
+        opacity: 0.85;
+      }
+
+      .project-nav {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+      }
+
+      .project-nav a {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--terracotta);
+        letter-spacing: 0.04em;
+        text-decoration: none;
+      }
+
+      .project-nav a:hover {
+        opacity: 0.8;
+      }
+
+      .project-hero {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        min-height: 280px;
+        background-color: #2a2a2a;
+        background-image: url("../assets/images/projects/project-4/s1.jpeg");
+        background-size: cover;
+        background-position: center 70%;
+      }
+
+      .project-hero__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(26, 26, 26, 0.75) 0%, transparent 55%);
+        pointer-events: none;
+      }
+
+      .project-hero__text {
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.75rem;
+        color: var(--white-pure);
+      }
+
+      .project-hero__tag {
+        margin: 0 0 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.95;
+      }
+
+      .project-hero__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(1.35rem, 3.5vw, 2.5rem);
+        font-weight: 600;
+        line-height: 1.12;
+      }
+
+      .project-meta {
+        border-top: 1px solid var(--terracotta);
+        border-bottom: 1px solid var(--terracotta);
+        margin: 0;
+      }
+
+      .project-meta__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 2rem;
+        justify-content: space-between;
+      }
+
+      .project-meta__cell {
+        min-width: 120px;
+      }
+
+      .project-meta__label {
+        margin: 0 0 0.35rem;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .project-meta__value {
+        margin: 0;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+      }
+
+      .project-body {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 3rem;
+      }
+
+      .project-body__aside {
+        flex: 0 0 30%;
+        min-width: 220px;
+      }
+
+      .project-body__aside h2 {
+        margin: 0 0 1rem;
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+      }
+
+      .project-body__aside ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .project-body__aside li {
+        margin-bottom: 0.5rem;
+      }
+
+      .project-body__main {
+        flex: 1 1 0;
+        min-width: 280px;
+      }
+
+      .project-body__main p {
+        margin: 0 0 1rem;
+      }
+
+      .project-article {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+      }
+
+      .project-article h2 {
+        margin: 2.25rem 0 1rem;
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .project-article h2:first-child {
+        margin-top: 0;
+      }
+
+      .project-article h3 {
+        margin: 1.5rem 0 0.65rem;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      .project-article p {
+        margin: 0 0 1rem;
+      }
+
+      .project-article ul {
+        margin: 0 0 1rem;
+        padding-left: 1.25rem;
+      }
+
+      .project-article li {
+        margin-bottom: 0.4rem;
+      }
+
+      .project-article blockquote {
+        margin: 1rem 0 1.25rem;
+        padding: 0.85rem 1rem;
+        border-left: 3px solid var(--terracotta);
+        background: rgba(26, 26, 26, 0.04);
+        font-size: 0.95rem;
+      }
+
+      .project-figure-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem 1.25rem;
+        margin: 1.5rem 0 2rem;
+      }
+
+      .project-figure-row--single {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+      }
+
+      @media (max-width: 720px) {
+        .project-figure-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .project-figure {
+        margin: 0;
+      }
+
+      .project-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid rgba(26, 26, 26, 0.1);
+      }
+
+      .project-figure figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .project-diagram-placeholder {
+        margin: 1rem 0 1.5rem;
+        padding: 2rem 1.25rem;
+        text-align: center;
+        border: 1px dashed rgba(26, 26, 26, 0.2);
+        background: var(--trace-paper);
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .project-demo-links {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.75rem 0 1rem;
+      }
+
+      .project-demo-links li {
+        margin-bottom: 0.35rem;
+      }
+
+      .project-resources {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 1rem;
+      }
+
+      .project-resources li {
+        margin-bottom: 0.45rem;
+      }
+
+      .project-footer {
+        padding: 1.5rem;
+        border-top: 1px solid rgba(26, 26, 26, 0.08);
+        background: var(--trace-paper);
+      }
+
+      .project-footer a {
+        font-family: var(--font-mono);
+        color: var(--terracotta);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+      }
+
+      .project-footer a:hover {
+        opacity: 0.8;
+      }
+
+      .project-sidebar-meta {
+        max-width: 1100px;
+        margin: 0 auto 2rem;
+        padding: 1.5rem 1.5rem 0;
+        border-top: 1px solid rgba(26, 26, 26, 0.12);
+      }
+
+      .project-sidebar-meta h2 {
+        margin: 0 0 1rem;
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+      }
+
+      .project-sidebar-meta dl {
+        margin: 0;
+        display: grid;
+        gap: 0.85rem 2rem;
+      }
+
+      @media (min-width: 640px) {
+        .project-sidebar-meta dl {
+          grid-template-columns: 140px 1fr;
+        }
+      }
+
+      .project-sidebar-meta dt {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .project-sidebar-meta dd {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .project-footer__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--charcoal);
+      }
+
+      .project-footer__inner p {
+        margin: 0;
+      }
+
+      .project-footer__inner a {
+        font-family: var(--font-body);
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="project-nav">
+      <a href="../index.html">← Back to Work</a>
+    </nav>
+
+    <header class="project-hero" role="img" aria-label="ReVIVE project hero">
+      <div class="project-hero__overlay" aria-hidden="true"></div>
+      <div class="project-hero__text">
+        <p class="project-hero__tag">CONTECH</p>
+        <h1 class="project-hero__title">City of Pittsburgh - RenewPGH / ReVIVE</h1>
+      </div>
+    </header>
+
+    <section class="project-meta" aria-label="Project metadata">
+      <div class="project-meta__inner">
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Client / partner</p>
+          <p class="project-meta__value">City of Pittsburgh  PLI (RenewPGH)</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Deliverable</p>
+          <p class="project-meta__value">Streamlit decision-support app + spatial prioritization</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Stack</p>
+          <p class="project-meta__value">Python · Streamlit · PyDeck · pandas · GeoJSON</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Year</p>
+          <p class="project-meta__value">2025</p>
+        </div>
+        <div class="project-meta__cell">
+          <p class="project-meta__label">Context</p>
+          <p class="project-meta__value">CMU AECM synthesis - condemned-property prioritization</p>
+        </div>
+      </div>
+    </section>
+
+    <article class="project-article">
+      <h2>Figure row 1 (two columns)</h2>
+      <div class="project-figure-row">
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/Tsynthesis/Data/pittsburgh_community.jpg"
+            alt="Pittsburgh community and program context"
+            loading="lazy"
+          />
+          <figcaption>Program context - neighborhoods &amp; revitalization</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/s1.jpeg"
+            alt="RenewPGH / ReVIVE overview - data-driven prioritization"
+            loading="lazy"
+          />
+          <figcaption>Tool overview  data-driven prioritization</figcaption>
+        </figure>
+      </div>
+
+      <h2>Figure row 2 (two columns)</h2>
+      <div class="project-figure-row">
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/Tsynthesis/Data/Property%20Management.png"
+            alt="Property management database and map"
+            loading="lazy"
+          />
+          <figcaption>Property Management - condemned-property database &amp; map</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/Tsynthesis/Data/Data%20driven%20.png"
+            alt="Multi-stage scoring and analytics"
+            loading="lazy"
+          />
+          <figcaption>Multi-stage scoring  physical, administrative, social</figcaption>
+        </figure>
+      </div>
+
+      <h2>Figure row 3 (optional full-width)</h2>
+      <div class="project-figure-row project-figure-row--single">
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/Tsynthesis/Data/Interactive%20mapping.png"
+            alt="Interactive mapping and suggestive priority map"
+            loading="lazy"
+          />
+          <figcaption>Interactive mapping - spatial distribution &amp; suggestive order of action</figcaption>
+        </figure>
+      </div>
+
+      <blockquote>
+        <strong>Note:</strong> Your repo already has suitable screenshots under <code>Data/</code>: <code>pittsburgh_community.jpg</code>, <code>Property Management.png</code>, <code>Data driven .png</code>, <code>Interactive mapping.png</code>. Copy or export them into your portfolio’s <code>assets/images/</code> and update the paths above.
+      </blockquote>
+
+      <h3>Technical approach diagram (centered)</h3>
+      <div class="project-diagram-placeholder" role="note">
+        <strong>Placeholder:</strong> Add a single diagram showing: open data + merged parent dataset → Streamlit app (tabs) → three scoring stages → weighted final score → PyDeck map. (<code>technical_approach_renewpgh.png</code> not yet in the portfolio folder.)
+      </div>
+
+      <h2>Project motivation &amp; problem statement</h2>
+      <p>
+        Vacant and condemned properties strain neighborhoods, public safety, and city capacity - but not every case is equally urgent or equally feasible to resolve. Agencies need a
+        <strong>transparent, repeatable way</strong> to compare properties using <strong>physical risk</strong>, <strong>administrative and legal friction</strong>, and <strong>neighborhood context</strong>, then
+        <strong>communicate priorities</strong> to staff, partners, and the public.
+      </p>
+      <p>
+        <strong>RenewPGH</strong> (Department of Permits, Licenses, and Inspections - PLI) focuses on turning problem properties into opportunities through systematic prioritization.
+        <strong>ReVIVE</strong> (Renewal Visualization &amp; Inspection Evaluation) is the decision-support application: it brings together property records, multi-stage scores, and interactive maps so agencies, developers, and community organizations can align on
+        <strong>where and how</strong> to intervene.
+      </p>
+      <p>
+        This project addresses the gap between <strong>raw city and parcel data</strong> and <strong>actionable prioritization</strong> - without replacing professional judgment, but making it easier to apply consistently.
+      </p>
+
+      <h2>Technical approach</h2>
+
+      <h3>1. Data integration and parent dataset</h3>
+      <ul>
+        <li>Merged <strong>condemned-property and parcel</strong> records with geocoding and centroids for mapping.</li>
+        <li>
+          Enriched context from <strong>neighborhood boundaries</strong>, <strong>zoning</strong>, <strong>crime incidents</strong>, <strong>311 volumes</strong>, <strong>parks</strong>, <strong>transit (PRT) density</strong>,
+          <strong>Census / CDBG block-group context</strong> (e.g., vacancy rate), and related CSV outputs from reproducible processing scripts.
+        </li>
+        <li>Central <strong>parent dataset</strong> (<code>Parent_dataset.csv</code> and derivatives) is the backbone for tabs, scores, and maps.</li>
+      </ul>
+
+      <h3>2. Application stack - Streamlit modular tabs</h3>
+      <ul>
+        <li>
+          Built a <strong>wide-layout Streamlit</strong> app with separate modules per workflow: Home, Property Management, Physical Conditions (Stage 1), Administrative Status (Stage 2), Social Feasibility (Stage 3), and Suggestive Order of Action.
+        </li>
+        <li><strong>Property management</strong>: load/edit the dataset, add properties, optional geocoding, <strong>PyDeck</strong> map of the portfolio.</li>
+        <li><strong>Caching</strong> (<code>st.cache_data</code>) for responsive loads on large CSVs.</li>
+      </ul>
+
+      <h3>3. Multi-stage scoring (config-driven)</h3>
+      <p>
+        Scores are driven by JSON configs (e.g. <code>physical_scoring.json</code>, <code>administrative_status.json</code>, <code>social_feasibility.json</code>) so criteria and rubrics stay
+        <strong>editable without rewriting core UI code</strong>.
+      </p>
+      <p><strong>Stage 1 - Physical conditions</strong> (illustrative criteria):</p>
+      <ul>
+        <li>
+          Violation danger level, estimated resolution time, vacancy duration, structural integrity, environmental hazards, fire/water damage severity - anchored to
+          <strong>PLI / inspection</strong> logic and documented scales (0–5).
+        </li>
+      </ul>
+      <p><strong>Stage 2 - Administrative status</strong> (illustrative criteria):</p>
+      <ul>
+        <li>Tax delinquency / liens, zoning compliance, ownership clarity, historic / preservation constraints, pathway to disposition - categorical rubrics with explicit anchor text for analysts.</li>
+      </ul>
+      <p><strong>Stage 3 - Social feasibility</strong> (illustrative criteria):</p>
+      <ul>
+        <li>Vacancy rate (tract/block group), crime incidence (neighborhood), park acreage density, transit density near PRT, 311 complaint volume - <strong>spatial joins and pre-aggregated</strong> metrics autofill where available.</li>
+      </ul>
+
+      <h3>4. Suggestive order of action and weighting</h3>
+      <ul>
+        <li>Combines stage scores with <strong>user-adjustable weights</strong> into a <strong>weighted cumulative / final score</strong>.</li>
+        <li><strong>Priority labels</strong> (e.g., high / moderate / low) summarize recommended coordination intensity.</li>
+        <li>
+          <strong>PyDeck</strong> visualization of top-priority parcels; optional <strong>CSV-driven target list</strong> (<code>Suggestivemaptemp.csv</code>) to fix a curated set of parcels for demos or policy review.
+        </li>
+      </ul>
+
+      <p><strong>Demonstration</strong> <em>(add your deployed app, screen recording, or slide deck links)</em>:</p>
+      <ul class="project-demo-links">
+        <li><a href="#">Streamlit Cloud / deployed app  <em>add URL</em></a></li>
+        <li><a href="#">Short walkthrough video - <em>add URL</em></a></li>
+        <li><a href="#">Slides or one-pager for stakeholders - <em>add URL</em></a></li>
+      </ul>
+
+      <h2>Multi-stage scoring &amp; prioritization analysis</h2>
+      <h3>A. From raw attributes to comparable scores</h3>
+      <ul>
+        <li>
+          Normalized <strong>heterogeneous inputs</strong> (ordinal scales, booleans, percentages, neighborhood aggregates) into <strong>comparable stage scores</strong> using config-defined breakpoints and anchor language for consistency.
+        </li>
+      </ul>
+      <h3>B. Administrative and zoning logic</h3>
+      <ul>
+        <li>Integrated <strong>zoning utilities</strong> and categorical <strong>administrative</strong> rules so legal and procedural risk is explicit in the model - not only building condition.</li>
+      </ul>
+      <h3>C. Neighborhood context and equity of information</h3>
+      <ul>
+        <li>
+          Linked parcels to <strong>neighborhood-level</strong> service and stress indicators (crime, 311, parks, transit) and <strong>Census-style</strong> vacancy context so prioritization conversations can reference
+          <strong>place-based</strong> factors, not only the parcel file.
+        </li>
+      </ul>
+
+      <h2>Results</h2>
+      <div class="project-figure-row project-figure-row--single">
+        <figure class="project-figure">
+          <img
+            src="../assets/images/projects/project-4/Tsynthesis/Data/Data%20driven%20.png"
+            alt="Scoring and prioritization results visualization"
+            loading="lazy"
+          />
+          <figcaption>Results or priority map  before/after or top-N parcels (<code>renewpgh_results.png</code> not in repo; using representative scoring screenshot)</figcaption>
+        </figure>
+      </div>
+      <ul>
+        <li><strong>Single workspace</strong> for PLI-aligned workflows: inventory, score, and map without switching tools.</li>
+        <li><strong>Reproducible rubrics</strong> via JSON configs reduce ad hoc spreadsheet drift.</li>
+        <li><strong>Three-lens scoring</strong> (physical / administrative / social) surfaces cases that are urgent, legally complex, or context-sensitive in different ways.</li>
+        <li><strong>Suggestive order</strong> and map layers make tradeoffs visible for <strong>inter-agency</strong> and <strong>public-facing</strong> discussions.</li>
+      </ul>
+
+      <h2>Limitations</h2>
+      <ul>
+        <li>Scores depend on <strong>data freshness and completeness</strong>; missing fields fall back to “unknown” or neutral handling and should be flagged in operational use.</li>
+        <li><strong>Automated spatial metrics</strong> simplify real-world dynamics (crime, 311, transit) and are not causal models of neighborhood outcomes.</li>
+        <li><strong>Professional inspection and legal review</strong> remain essential; the tool supports prioritization, not code compliance determinations or legal advice.</li>
+        <li>Demo deployments may use <strong>subset or sanitized</strong> data - production governance (PII, retention, access control) must follow city policy.</li>
+      </ul>
+
+      <h2>Skills and technologies demonstrated</h2>
+      <ul>
+        <li><strong>Python</strong> data pipelines and merges (pandas; multiple preprocessing scripts)</li>
+        <li><strong>Streamlit</strong> multi-tab applications and forms</li>
+        <li><strong>PyDeck</strong> interactive mapping</li>
+        <li><strong>JSON-configured</strong> scoring models and UI generation from shared configs</li>
+        <li><strong>Geospatial / neighborhood</strong> joins (GeoJSON, centroids, aggregates)</li>
+        <li><strong>Product thinking</strong> for government stakeholders: clarity, auditability, and repeatable criteria</li>
+      </ul>
+
+      <h2>Resources</h2>
+      <ul class="project-resources">
+        <li><a href="https://docs.streamlit.io/" target="_blank" rel="noopener noreferrer">Streamlit Documentation</a></li>
+        <li><a href="https://deckgl.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">PyDeck</a></li>
+        <li><a href="https://www.pittsburghpa.gov/pli" target="_blank" rel="noopener noreferrer">City of Pittsburgh - PLI</a></li>
+        <li><a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">pandas documentation</a></li>
+      </ul>
+    </article>
+
+    <section class="project-sidebar-meta" aria-label="Project details">
+      <h2>Project details</h2>
+      <dl>
+        <dt>Project title</dt>
+        <dd>RenewPGH / ReVIVE  Condemned Properties Priority System</dd>
+        <dt>Role</dt>
+        <dd>Developer / researcher  data integration, Streamlit application, JSON-configured scoring, geospatial joins</dd>
+        <dt>Context</dt>
+        <dd>CMU AECM synthesis; collaboration framing with City of Pittsburgh PLI / RenewPGH program</dd>
+        <dt>Repository</dt>
+        <dd>Add public Git link if you publish the codebase.</dd>
+      </dl>
+    </section>
+
+    <footer class="project-footer">
+      <div class="project-footer__inner">
+  <p><a href="../index.html">← Back to Work</a></p>
+        <p>
+          Contact:
+          <a href="mailto:stanya4218@gmail.com">stanya4218@gmail.com</a>
+          ·
+          <a href="mailto:tanyas2@andrew.cmu.edu">tanyas2@andrew.cmu.edu</a>
+          ·
+          <a href="../index.html#contact">Home  Contact</a>
+        </p>
+        <p>
+          Follow:
+          <a href="https://www.linkedin.com/in/tanya-singh-aecmanagement" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p>Copyright © 2026, Tanya Singh</p>
+      </div>
+    </footer>
+  </body>
+</html>
